@@ -10,7 +10,7 @@ module "sandbox" {
     # Identity Center (SSO) – Control Tower won’t create an account without these
     SSOUserEmail              = "chukwu.emmanuel+sandbox@aol.com"
     SSOUserFirstName          = "James"
-    SSOUserLastName           = "Kene"
+    SSOUserLastName           = "KeneMark"
   }
 
   # ───── 2. At least one tag (helps you find it in the CT console) ─────
