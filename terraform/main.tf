@@ -1,29 +1,30 @@
 module "sandbox" {
   source = "./modules/aft-account-request"
 
+  # ───── 1. Control Tower parameters (all 6 are required) ─────
   control_tower_parameters = {
-    AccountEmail              = "chukwu.emmanuel@aol.com"
-    AccountName               = "JamesKene"
+    AccountEmail              = "chukwu.emmanuel+sandbox@aol.com"
+    AccountName               = "sandbox-kene"
     ManagedOrganizationalUnit = "Sandbox"
-    SSOUserEmail              = "chukwu.emmanuel@aol.com"
+
+    # Identity Center (SSO) – Control Tower won’t create an account without these
+    SSOUserEmail              = "chukwu.emmanuel+sandbox@aol.com"
     SSOUserFirstName          = "James"
-    SSOUserLastName           = "ken"
+    SSOUserLastName           = "Kene"
   }
 
-  # ≤— keep at least ONE tag
+  # ───── 2. At least one tag (helps you find it in the CT console) ─────
   account_tags = {
     Environment = "Sandbox"
   }
 
-  # ≤— ***MANDATORY*** two keys, even if just placeholder text
+  # ───── 3. Mandatory change-management keys (free-text is fine) ─────
   change_management_parameters = {
     change_requested_by = "automation"
     change_reason       = "initial create"
   }
 
-  # ≤— Can be empty, but not null
-  custom_fields = {}
-  
-  # ≤— If you don’t use per-account customisations, pass empty string
-  account_customizations_name = "Sandbox"
+  # ───── 4. Optional fields – keep them, just leave them empty ─────
+  custom_fields               = {}           # can stay empty
+  account_customizations_name = ""           # no per-account customisations yet
 }
