@@ -26,7 +26,7 @@ module "sandbox" {
   # ───────── 3. Change-management metadata ─────────
   change_management_parameters = {
     change_requested_by = "Platform Team"
-    change_reason       = "Validate SG-quota automation"
+    change_reason       = "Validate SG-quota automation, testing"
   }
 
   # ───────── 4. Optional custom fields ─────────
