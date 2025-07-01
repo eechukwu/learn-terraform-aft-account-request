@@ -2,12 +2,12 @@ module "sandbox" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "eechukwuawslab+sandboxaft1@gmail.com"
-    AccountName               = "sandbox-aftproject"
+    AccountEmail              = "eechukwuawslab+sandeec@gmail.com"
+    AccountName               = "eechukwuawslab+sandeec"
     ManagedOrganizationalUnit = "Sandbox"
-    SSOUserEmail              = "eechukwuawslab+sandboxaft1@gmail.com"
-    SSOUserFirstName          = "Sandbox"
-    SSOUserLastName           = "sandbox-aftproject"
+    SSOUserEmail              = "eechukwuawslab+sandeec@gmail.com"
+    SSOUserFirstName          = "sandeec"
+    SSOUserLastName           = "eechukwuawslab+sandeec"
   }
 
   # ≤— keep at least ONE tag
@@ -25,5 +25,5 @@ module "sandbox" {
   custom_fields = {}
   
   # ≤— If you don’t use per-account customisations, pass empty string
-  account_customizations_name = ""
+  account_customizations_name = "Sandbox"
 }
