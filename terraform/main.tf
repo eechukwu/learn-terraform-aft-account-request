@@ -3,7 +3,7 @@ module "sandbox" {
 
   control_tower_parameters = {
     AccountEmail              = "eechukwuawslab+sandboxaft@gmail.com"
-    AccountName               = "sandbox-aft"
+    AccountName               = "sandbox-aft-1"
     ManagedOrganizationalUnit = "Sandbox"
     SSOUserEmail              = "eechukwuawslab+sandboxaft@gmail.com"
     SSOUserFirstName          = "eechukwuawslab+sandboxaft"
