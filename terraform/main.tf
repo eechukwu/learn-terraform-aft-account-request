@@ -20,7 +20,7 @@ module "sandbox" {
 
   # ───── 3. Mandatory change-management keys (free-text is fine) ─────
   change_management_parameters = {
-    change_requested_by = "automation"
+    change_requested_by = "automation script"
     change_reason       = "initial create"
   }
 
