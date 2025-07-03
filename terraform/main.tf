@@ -3,8 +3,8 @@ module "sandbox" {
 
   # ───── 1. Control Tower parameters (all 6 are required) ─────
   control_tower_parameters = {
-    AccountEmail              = "chukwu.emmanuel+sandbox@aol.com"
-    AccountName               = "sandbox-kene"
+    AccountEmail              = "chukwu.emmanuel+sandboxcloud@aol.com"
+    AccountName               = "sandbox-kene-cloud"
     ManagedOrganizationalUnit = "Sandbox"
 
     # Identity Center (SSO) – Control Tower won’t create an account without these
