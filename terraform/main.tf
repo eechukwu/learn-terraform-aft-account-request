@@ -3,8 +3,8 @@ module "sandbox_quota_test_final" {
   
   # ───── 1. Control Tower parameters (all 6 are required) ─────
   control_tower_parameters = {
-    AccountEmail              = "eechukwu+quotatest07034@gmail.com"
-    AccountName               = "sg-quota-validation-202515"
+    AccountEmail              = "eechukwu+quotatest0507@gmail.com"
+    AccountName               = "sg-quota-validation-05-07"
     ManagedOrganizationalUnit = "Sandbox"
     # Identity Center (SSO) – Control Tower won't create an account without these
     SSOUserEmail              = "eechukwu@gmail.com"
@@ -17,7 +17,7 @@ module "sandbox_quota_test_final" {
     Environment = "Testing"
     Purpose     = "Security-Group-Quota-Final-Validation"
     Project     = "AFT-Quota-Automation"
-    TestDate    = "2025-07-03"
+    TestDate    = "2025-07-05"
     TestPhase   = "Final-End-to-End"
   }
   
