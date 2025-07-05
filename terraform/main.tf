@@ -82,3 +82,50 @@ module "sandbox_quota_test_2025_07_08" {
   # Leave blank → global customizations only
   account_customizations_name = ""
 }
+
+module "sandbox_quota_test_2025_07_05_fresh" {
+  source = "./modules/aft-account-request"
+  
+  # ───── 1. Control Tower parameters (all 6 are required) ─────
+  control_tower_parameters = {
+    AccountEmail              = "eechukwu+quotatest0507fresh@gmail.com"
+    AccountName               = "sg-quota-fresh-test-05-07"
+    ManagedOrganizationalUnit = "Sandbox"
+    # Identity Center (SSO) – Control Tower won't create an account without these
+    SSOUserEmail              = "eechukwu@gmail.com"
+    SSOUserFirstName          = "Emmanuel"
+    SSOUserLastName           = "Chukwu"
+  }
+  
+  # ───── 2. Tags for tracking ─────
+  account_tags = {
+    Environment        = "Testing"
+    Purpose           = "Security-Group-Quota-Fresh-Test"
+    Project           = "AFT-Quota-Automation"
+    TestDate          = "2025-07-05"
+    TestPhase         = "Fresh-Account-Global-Customizations"
+    ExpectedQuota     = "200"
+    TestRegions       = "us-east-1,eu-west-2,ap-southeast-1"
+    TestType          = "EndToEnd"
+  }
+  
+  # ───── 3. Mandatory change-management keys ─────
+  change_management_parameters = {
+    change_requested_by = "emmanuel.chukwu"
+    change_reason       = "Fresh account creation to test Security Group quota automation via AFT Global Customizations"
+  }
+  
+  # ───── 4. Custom fields for this test ─────
+  custom_fields = {
+    test_purpose          = "fresh global customizations test"
+    expected_quota_value  = "200 security group rules"
+    automation_version    = "v1.0-final"
+    test_regions          = "us-east-1,eu-west-2,ap-southeast-1"
+    validation_enabled    = "true"
+    retry_logic          = "5min-intervals-2hr-timeout"
+    creation_timestamp   = "2025-07-05T23:00:00Z"
+  }
+  
+  # ───── 5. Force global customizations ─────
+  account_customizations_name = ""  # Empty = global customizations only
+}
