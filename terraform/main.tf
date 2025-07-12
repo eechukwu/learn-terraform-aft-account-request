@@ -2,8 +2,8 @@ module "sandbox_quota_keneaft_prod_2025_07_10" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "keneaft+prodCluster@gmail.com"      # unique via plus addressing
-    AccountName               = "sg-quota-prod-like-09-07-2025"
+    AccountEmail              = "keneaft+prodCluster2025-07@gmail.com"      # unique via plus addressing
+    AccountName               = "sg-quota-prod-like-12-07-2025"
     ManagedOrganizationalUnit = "Sandbox"
 
     SSOUserEmail              = "keneaft@gmail.com"          # reuse or change
