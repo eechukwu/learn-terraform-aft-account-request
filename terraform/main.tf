@@ -1,8 +1,8 @@
 module "sandbox_quota_keneaft_prod_2025_09_28" {
   source = "./modules/aft-account-request"
   control_tower_parameters = {
-    AccountEmail              = "keneaft+prodCluster2025-0928@gmail.com"  # NEW unique email
-    AccountName               = "sg-quota-prod-like-28-09-2025"           # NEW unique name
+    AccountEmail              = "keneaft+prodCluster2025-092889898@gmail.com"  # NEW unique email
+    AccountName               = "sg-quota-prod-like-28-09-2025-sunday"           # NEW unique name
     ManagedOrganizationalUnit = "Sandbox"
     SSOUserEmail              = "keneaft@gmail.com"
     SSOUserFirstName          = "Kene"
@@ -10,11 +10,6 @@ module "sandbox_quota_keneaft_prod_2025_09_28" {
   }
   account_tags = {
     Environment = "Testing"
-    Purpose     = "Security-Group-Quota-Prod-Like-Validation"
-    Project     = "AFT-Quota-Automation"
-    TestDate    = "2025-09-28"  # Updated to current date
-    TestPhase   = "Prod-Like-Validation"
-    Regions     = "us-east-1,eu-west-2,ap-southeast-1"
   }
   change_management_parameters = {
     change_requested_by = "kene.aft"
