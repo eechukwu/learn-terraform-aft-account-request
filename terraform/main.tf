@@ -1,9 +1,9 @@
-module "sandbox_with_customizations_2025_09_30" {
+module "sandbox_approval_gates_test_final" {
   source = "./modules/aft-account-request"
   
   control_tower_parameters = {
-    AccountEmail              = "keneaft+customtest2025starboy@gmail.com"
-    AccountName               = "sg-quota-custom-test-202528septstarboy"
+    AccountEmail              = "keneaft+approvalgates-final2025@gmail.com"
+    AccountName               = "aft-approval-gates-test-final2025"
     ManagedOrganizationalUnit = "Sandbox"
     SSOUserEmail              = "keneaft@gmail.com"
     SSOUserFirstName          = "Kene"
@@ -12,17 +12,17 @@ module "sandbox_with_customizations_2025_09_30" {
   
   account_tags = {
     Environment = "Testing"
-    Purpose     = "ApprovalGatesValidation"
+    Purpose     = "Approval-Gates-Final-Validation"
   }
   
   change_management_parameters = {
     change_requested_by = "kene.aft"
-    change_reason       = "Testing approval gates with account customizations"
+    change_reason       = "Final validation of approval gates implementation"
   }
   
   custom_fields = {
-    test_type          = "full-pipeline-with-customizations"
-    approval_gates     = "enabled"
+    test_type      = "approval-gates-validation"
+    deployment     = "fresh-aft-with-correct-ssm"
   }
   
   account_customizations_name = "sandbox"
