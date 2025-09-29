@@ -2,8 +2,8 @@ module "sandbox_approval_gates_test_final" {
   source = "./modules/aft-account-request"
   
   control_tower_parameters = {
-    AccountEmail              = "keneaft+approvalgates-final2025@gmail.com"
-    AccountName               = "aft-approval-gates-test-final2025"
+    AccountEmail              = "keneaft+approvalgatesgiveup@gmail.com"
+    AccountName               = "aft-approval-gates-test-giveup2025"
     ManagedOrganizationalUnit = "Sandbox"
     SSOUserEmail              = "keneaft@gmail.com"
     SSOUserFirstName          = "Kene"
