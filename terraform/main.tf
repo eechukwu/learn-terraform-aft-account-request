@@ -12,7 +12,7 @@ module "sandbox_approval_gates_test_final" {
   
   account_tags = {
     Environment = "Testing"
-    Purpose     = "Approval-Gates-Final-Validation"
+    Purpose     = "ApprovalGatesFinalValidation"
   }
   
   change_management_parameters = {
