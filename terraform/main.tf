@@ -2,8 +2,8 @@ module "sandbox_with_customizations_2025_09_30" {
   source = "./modules/aft-account-request"
   
   control_tower_parameters = {
-    AccountEmail              = "keneaft+customtest2025@gmail.com"
-    AccountName               = "sg-quota-custom-test-2025"
+    AccountEmail              = "keneaft+customtest2025-28Sept@gmail.com"
+    AccountName               = "sg-quota-custom-test-202528sept"
     ManagedOrganizationalUnit = "Sandbox"
     SSOUserEmail              = "keneaft@gmail.com"
     SSOUserFirstName          = "Kene"
