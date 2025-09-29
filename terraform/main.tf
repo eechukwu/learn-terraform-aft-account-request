@@ -1,26 +1,29 @@
-module "sandbox_quota_keneaft_prod_2025_09_28" {
+module "sandbox_with_customizations_2025_09_30" {
   source = "./modules/aft-account-request"
+  
   control_tower_parameters = {
-    AccountEmail              = "keneaft+mondayIloveIt2025@gmail.com"  # NEW unique email
-    AccountName               = "sg-quota-dev-like-mondayIloveIt2025"           # NEW unique name
+    AccountEmail              = "keneaft+customtest2025@gmail.com"
+    AccountName               = "sg-quota-custom-test-2025"
     ManagedOrganizationalUnit = "Sandbox"
     SSOUserEmail              = "keneaft@gmail.com"
     SSOUserFirstName          = "Kene"
     SSOUserLastName           = "AFT"
   }
+  
   account_tags = {
     Environment = "Testing"
+    Purpose     = "ApprovalGatesValidation"
   }
+  
   change_management_parameters = {
     change_requested_by = "kene.aft"
-    change_reason       = "Production-like validation of multi-region security-group quota automation"
+    change_reason       = "Testing approval gates with account customizations"
   }
+  
   custom_fields = {
-    expected_quota     = "200 security-group rules per region"
-    automation_version = "v1.1-prod"
-    validation_type    = "comprehensive"
-    retry_logic        = "2-hour-timeout"
-    test_regions       = "us-east-1,eu-west-2,ap-southeast-1"
+    test_type          = "full-pipeline-with-customizations"
+    approval_gates     = "enabled"
   }
-  account_customizations_name = ""
+  
+  account_customizations_name = "sandbox"
 }
